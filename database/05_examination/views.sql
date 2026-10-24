@@ -1,0 +1,2 @@
+CREATE OR REPLACE VIEW vw_exam_roster AS SELECT ex.exam_id,ex.exam_name,st.student_id,st.enrollment_no,er.exam_registration_id,eh.hall_name FROM exam_registration er JOIN exam ex ON ex.exam_id=er.exam_id JOIN enrollment e ON e.enrollment_id=er.enrollment_id JOIN student st ON st.student_id=e.student_id LEFT JOIN exam_hall eh ON eh.exam_hall_id=er.exam_hall_id;
+CREATE OR REPLACE VIEW vw_published_results AS SELECT rs.*,st.enrollment_no,sem.term FROM result_summary rs JOIN student st ON st.student_id=rs.student_id JOIN semester sem ON sem.semester_id=rs.semester_id;

@@ -1,0 +1,13 @@
+USE college_erp;
+SELECT * FROM leave_type;
+SELECT * FROM leave_balance;
+SELECT * FROM leave_request;
+SELECT * FROM payroll;
+SELECT * FROM salary_structure;
+SELECT * FROM salary_change_log;
+DESCRIBE leave_type;
+DESCRIBE leave_balance;
+DESCRIBE leave_request;
+DESCRIBE salary_structure;
+DESCRIBE salary_change_log;
+DESCRIBE payroll;
